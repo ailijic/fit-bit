@@ -1,0 +1,24 @@
+{
+  "name": "fit-bit",
+  "version": "0.0.1",
+  "description": "Fitbit API site",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailijic/fit-bit.git"
+  },
+  "author": "ailijic",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ailijic/fit-bit/issues"
+  },
+  "homepage": "https://github.com/ailijic/fit-bit#readme"
+}
