@@ -1,9 +1,49 @@
-<html>
-    <head>
-      <link src="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    </head>
-    <body>
-        
-      <script src="node-modules/jquery/dist/jquery.min.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> FitBit Dashboard </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="jumbotron text-center">
+    <h1> FitBit Dashboard </h1>
+    <a href="https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=228283&redirect_uri=https%3A%2F%2F45f63ad8.ngrok.io&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800">
+      Sign In
+    </a>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <canvas id="myChart" style="max-height:100%; width:auto;"></canvas>
+      </div> 
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Column 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Image</h3>
+        <p>The .img-responsive class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>
+        <img src="images/graph.svg" class="img-responsive" alt="graph">
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+    </div>
+  </div>
+</body>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 </html>
