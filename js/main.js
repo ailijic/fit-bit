@@ -5,7 +5,7 @@ function main () {
 
   const authObj = getAuthObj()
   const jsonPromise = requestData(authObj)
-  const dataToGraph = extractGraphPoints(dataObj)
+  // const dataToGraph = extractGraphPoints(dataObj)
   
   $(document).ready(function () {
     removeSignInIfLoggedIn(authObj)
