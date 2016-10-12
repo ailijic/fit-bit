@@ -1,24 +1,17 @@
 main()
 function main () {
 'use strict'
- // const fetch = require('node-fetch')
-
   const authObj = getAuthObj()
   const jsonPromise = requestData(authObj)
-  // const dataToGraph = extractGraphPoints(dataObj)
-  
   $(document).ready(function () {
     removeSignInIfLoggedIn(authObj)
     resolvePromise(jsonPromise, graphJson)  
-      // renderGraph(dataToGraph)
+    let graphJson = (jsonObj) => {
+      console.log(jsonObj)
+      const points = extractPoints(jsonObj)
+      renderGraph(points)
+    }
   })
-
-/////////////////////////////////////////////////////////////////////////////
-// const jsonPromise = requestData(authObj)
-// resolvePromise(jsonPromise, graphJson)
-function graphJson (jsonObj) {
-  console.log(jsonObj)
-}
 /////////////////////////////////////////////////////////////////////////////
 function requestData (authObj) {
   // Auth data
@@ -80,7 +73,18 @@ function splitUrl (url) {
   }
   return retObj
 }
-function renderGraph (dataToGraph) {
+function extractPoints (jsonObj) {
+  const arrayOfObjects = jsonObj["activities-steps"]
+  let retArray = []
+  for (let i in arrayOfObjects) {
+    retArray.push(arrayOfObjects[i].value)
+  }
+  retArray = retArray.map((val) => {
+    return parseInt(val)
+  })
+  return retArray
+}
+function renderGraph (points) {
   let ctx = $("#myChart")
   var myChart = new Chart(ctx, {
   type: 'line',
@@ -88,7 +92,8 @@ function renderGraph (dataToGraph) {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
     datasets: [{
       label: '# of Votes',
-      data: [12, 7, 3, 5, 2, 3],
+//      data: [12, 7, 3, 5, 2, 3],
+      data: points,
       backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',

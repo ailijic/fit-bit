@@ -12,7 +12,7 @@ const authObj = {
 const jsonPromise = requestData(authObj)
 resolvePromise(jsonPromise, graphJson)
 function graphJson (jsonObj) {
-  console.log(jsonObj)
+  console.log(jsonObj["activities-steps"][0])
 }
 /////////////////////////////////////////////////////////////////////////////
 function requestData (authObj) {
