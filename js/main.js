@@ -55,7 +55,7 @@ function splitUrl (url) {
   const retObj = {}
   retObj.path = url.split('#')[0]
   const fullAuth = url.split('#')[1].split('&')
-  for (indexA in fullAuth) {
+  for (let indexA in fullAuth) {
     let authTupple = fullAuth[indexA].split('=')
     retObj[authTupple[0]] = authTupple[1]
   }
