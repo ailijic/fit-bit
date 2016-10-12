@@ -6,12 +6,12 @@ function main () {
   $(document).ready(function () {
     removeSignInIfLoggedIn(authObj)
     resolvePromise(jsonPromise, graphJson)  
-    function graphJson (jsonObj) {
-      console.log(jsonObj)
-      const points = extractPoints(jsonObj)
-      renderGraph(points)
-    }
   })
+  function graphJson (jsonObj) {
+    console.log(jsonObj)
+    const points = extractPoints(jsonObj)
+    renderGraph(points)
+  }
 /////////////////////////////////////////////////////////////////////////////
 function requestData (authObj) {
   // Auth data
