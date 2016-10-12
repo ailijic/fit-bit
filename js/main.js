@@ -8,7 +8,6 @@ function main () {
     resolvePromise(jsonPromise, graphJson)  
   })
   function graphJson (jsonObj) {
-    console.log(jsonObj)
     const points = extractPoints(jsonObj)
     renderGraph(points)
   }
