@@ -6,7 +6,7 @@ function main () {
   $(document).ready(function () {
     removeSignInIfLoggedIn(authObj)
     resolvePromise(jsonPromise, graphJson)  
-    let graphJson = (jsonObj) => {
+    function graphJson (jsonObj) {
       console.log(jsonObj)
       const points = extractPoints(jsonObj)
       renderGraph(points)
