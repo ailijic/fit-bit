@@ -17,7 +17,7 @@ function reqListener () {
 function buildUrl () {
   let retUrl = ''
   let args = arguments
-  for (i in args) {
+  for (let i in args) {
     retUrl = retUrl + args[i] + '/'
   }
   retUrl = retUrl.slice(0,-1) // Use slice cuz url has extra '/'
