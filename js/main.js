@@ -11,7 +11,8 @@ function main () {
   })
 
 function reqListener () {
-  console.log(this.responseText)
+  console.log(JSON.parse(this.responseText))
+  
 }
 
 function buildUrl () {
